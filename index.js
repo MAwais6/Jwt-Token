@@ -2,12 +2,16 @@ const express = require('express');
 const jwt = require('jsonwebtoken');
 
 const {transporter} = require('./controller/sendMail');
+const {mailchimp} = require('./controller/sendMailChimp');
 
 const app = express();
 
 const secretkey= "secretkey";
 
+
 app.get("/" , (req, res) => {
+   
+
     res.send("Hello World");
 });
 
